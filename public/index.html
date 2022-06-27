@@ -25,6 +25,13 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <meta
+     http-equiv="Content-Security-Policy"
+        connect-src blob: data: https://api.sprig.com 
+        https://cdn.sprig.com;
+        font-src data:
+        worker-src blob:""
+   />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -50,5 +57,6 @@
         p.parentNode.insertBefore(a, p);
       })(document, 'https://cdn.sprig.com/shim.js', 'ENVIRONMENT_ID');
     </script>
+    
   </body>
 </html>
