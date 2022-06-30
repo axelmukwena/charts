@@ -4,7 +4,6 @@ import Home from "./views/Home";
 import PageCharts from "./views/PageCharts";
 import Layout from "./components/Layout";
 import productCharts from "./api/productCharts";
-import { sprig } from '@sprig-technologies/sprig-browser';
 
 
 const pages = [
@@ -34,6 +33,3 @@ function App() {
 }
 
 export default App;
-export const Sprig = sprig.configure({
-  environmentId: 'ENVIRONMENT_ID',
-})
