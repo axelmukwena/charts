@@ -25,17 +25,29 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <!-- <meta
-     http-equiv="Content-Security-Policy"
-        connect-src blob: data: https://api.sprig.com 
-        https://cdn.sprig.com;
-        font-src data:
-        worker-src blob:""
-   /> -->
+ 
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div id="shell">
+      <div className="wrapper">
+        <div className="inner"><a href="#" id="myBtn">TAKE THE SURVEY</a></div>
+      </div>
+      <div id="embedModal" className="modal">
+        <div className="modal-content">
+          <div className="iframe-container">
+            <iframe
+              loading="lazy"
+              src="https://oneminmastery.kloudsoft.co/survey/eventListener"
+            ></iframe>
+          </div>
+          <span className="close" id="close"></span>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/gh/proevacs/embedtogglewoslide@v0.1/embedtoggle.js"></script>
+    </div>
+		</div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -46,17 +58,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-      (function(l,e,a,p) {
-        if (window.Sprig) return;
-        window.Sprig = function(){S._queue.push(arguments)}
-        var S = window.Sprig;S.appId = a;S._queue = [];window.UserLeap=S;
-        a=l.createElement('script');
-        a.async=1;a.src=e+'?id='+S.appId;
-        p=l.getElementsByTagName('script')[0];
-        p.parentNode.insertBefore(a, p);
-      })(document, 'https://cdn.sprig.com/shim.js', 'ENVIRONMENT_ID');
-    </script>
-    
   </body>
 </html>

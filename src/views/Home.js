@@ -1,7 +1,9 @@
 import { Stack, Typography } from "@mui/material";
+import "../index.css";
 
 const Home = function Home({ pages }) {
 	return (
+    
 		<Stack
 			direction='column'
 			justifyContent='flex-start'
@@ -12,7 +14,11 @@ const Home = function Home({ pages }) {
 			<Typography>This is Home page</Typography>
 			<Typography>Yes it is</Typography>
 		</Stack>
+	
+	
 	);
+	
+
 };
 
 export default Home;
